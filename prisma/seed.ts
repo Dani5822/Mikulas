@@ -17,7 +17,7 @@ async function main() {
     await prisma.kid.create({
       data: {
         name: faker.person.fullName(),
-        address: faker.location.country(),
+        address: faker.location.country() + ', ' + faker.location.city()+ ', ' + faker.location.street() + ', ' + faker.location.buildingNumber(),
         good: Math.random() < 0.5,
       }
     })
